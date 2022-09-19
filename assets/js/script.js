@@ -42,10 +42,9 @@ function computePassword() {
   console.log(arrayForRandomization); // ['1',empty,'1','1'] {Sample}
   console.log(lengthOfPassword); // 9 {Sample}
   console.log(includeCases); // lns {Sample}
-
-  for(let i = 0; i< lengthOfPassword; i++) {
+  var i=0;
+  for(i = 0; i< lengthOfPassword; i++) {
     let indexRandom = Math.floor(Math.random() * (arrayForRandomization.length));
-    0.554 * 4
     //indexRandom will generate a number which is between 0 to 3. We can use this to randomly add a character on to the password to prevent same kind of pattern in random characters.
     //Example: If we normally generate a password without any randomization for position, we would get random digits but they follow same order.
     //Ex: dU4$ , wO7*, zA1! (All these look random but the order is same - lowercase, uppercase, number, special)
@@ -78,6 +77,7 @@ function computePassword() {
 
       } else {
         indexRandom = Math.floor(Math.random() * arrayForRandomization.length);
+        i--;
       }
   }
 
